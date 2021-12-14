@@ -1,10 +1,14 @@
 import React from 'react'
-import btnMiniBg from './Images/btnminibg.png'
+import btnMiniBg from '../Images/btnminibg.png'
 
-export default function CODbutton() {
+export default function CODbutton({
+  ButtonText,
+  Link
+}) {
   return (
-    <button
-      className="p-3 font-extralight  border"
+    <a
+      href={Link}
+      className="p-3 cod-button font-medium font-pop border relative"
       style={{
         borderColor: '#597985',
         boxShadow: 'inset 0px 0px 5px #597985',
@@ -13,7 +17,7 @@ export default function CODbutton() {
         backgroundImage: `url(${btnMiniBg})`
       }}
     >
-      JAEGER
-    </button>
+      {ButtonText}
+    </a>
   )
 }
