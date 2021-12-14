@@ -14,3 +14,55 @@
   object-fit: cover;
   object-position: center;
 }
+
+.cod-button {
+  text-shadow: 0px 0px 10px rgba
+    (121, 217, 255, 0) f;
+  transition: all 0.8s ease;
+}
+
+.cod-button::after,
+.cod-button::before {
+  box-shadow: 0px 0px 10px;
+  transition: all 0.8s ease;
+}
+.cod-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0px;
+  height: 2px;
+  background-image: linear-gradient(
+    to right,
+    rgba(151, 205, 225, 0.5),
+    #79d9ff 20%,
+    #79d9ff 80%,
+    rgba(151, 205, 225, 0.5)
+  );
+}
+
+.cod-button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0px;
+  height: 2px;
+  background-image: linear-gradient(
+    to right,
+    rgba(151, 205, 225, 0.5),
+    #79d9ff 20%,
+    #79d9ff 80%,
+    rgba(151, 205, 225, 0.5)
+  );
+}
+.cod-button:hover {
+  text-shadow: 0px 0px 10px #79d9ff;
+}
+.cod-button:hover::after,
+.cod-button:hover::before {
+  width: 100%;
+}
