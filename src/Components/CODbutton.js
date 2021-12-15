@@ -1,13 +1,14 @@
 import React from 'react'
 import btnMiniBg from '../Images/btnminibg.png'
+import { Link } from 'react-router-dom'
 
 export default function CODbutton({
-  ButtonText,
-  Link
+  buttonText,
+  link
 }) {
   return (
-    <a
-      href={Link}
+    <Link
+      to={link}
       className="p-3 text-center cod-button text-sm font-medium font-pop border relative"
       style={{
         borderColor: '#597985',
@@ -17,7 +18,7 @@ export default function CODbutton({
         backgroundImage: `url(${btnMiniBg})`
       }}
     >
-      {ButtonText}
-    </a>
+      {buttonText}
+    </Link>
   )
 }
