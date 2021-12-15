@@ -8,7 +8,7 @@ export default function CODbutton({
   return (
     <a
       href={Link}
-      className="p-3 cod-button font-medium font-pop border relative"
+      className="p-3 text-center cod-button text-sm font-medium font-pop border relative"
       style={{
         borderColor: '#597985',
         boxShadow: 'inset 0px 0px 5px #597985',
