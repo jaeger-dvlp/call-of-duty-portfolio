@@ -45,13 +45,49 @@ export default function Information() {
             JAEGER
           </h1>
           <span
-            className="desc overflow-hidden transition-all duration-300 text-sm uppercase text-zinc-400"
+            className="desc w-full overflow-hidden transition-all duration-300 text-sm uppercase text-zinc-400"
             style={{
               letterSpacing: '10px'
             }}
           >
             OPERATOR INFORMATION
           </span>
+          <div className="w-full operator-information flex flex-wrap justify-start text-sm mt-5 text-zinc-400">
+            <table>
+              <tbody>
+                <tr>
+                  <td>NAME / SURNAME</td>
+                  <td className="line-through">
+                    CLASSIFIED
+                  </td>
+                </tr>
+                <tr>
+                  <td>STATUS</td>
+                  <td>Commissioned</td>
+                </tr>
+                <tr>
+                  <td>BLOOD GROUP</td>
+                  <td>A RH+</td>
+                </tr>
+                <tr>
+                  <td>UNIT</td>
+                  <td>22nd SAS Regiment</td>
+                </tr>
+                <tr>
+                  <td>LOCATION</td>
+                  <td>Istanbul / Turkey</td>
+                </tr>
+                <tr>
+                  <td>LOCAL TIME</td>
+                  <td>GMT +3</td>
+                </tr>
+                <tr>
+                  <td>SPECILIZATION</td>
+                  <td>CQB</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </>
