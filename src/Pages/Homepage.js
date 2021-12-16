@@ -33,24 +33,21 @@ export default function Homepage() {
 
   useEffect(() => {
     setLoadingStatus('invisible opacity-0')
+    let descIndex = 0
+    const changeDesc = async () => {
+      setDescReady(DescTexts[descIndex])
+    }
+    changeDesc()
+    setInterval(async () => {
+      await changeDesc()
+      descIndex === DescTexts.length - 1
+        ? (descIndex = 0)
+        : (descIndex += 1)
+    }, 1000)
+
+    return () => setDescReady({})
   }, [])
 
-  useEffect(() => {
-    window.onload = () => {
-      const changeDesc = () => {
-        DescTexts.map((desc, i) =>
-          setTimeout(
-            () => setDescReady(desc),
-            i * 1500
-          )
-        )
-      }
-      changeDesc()
-      setInterval(() => {
-        changeDesc()
-      }, DescTexts.length * 1500)
-    }
-  })
   return (
     <>
       <div
