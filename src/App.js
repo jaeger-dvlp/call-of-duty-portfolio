@@ -18,7 +18,7 @@ function App() {
             exact
             path="/"
             component={Homepage}
-          />{' '}
+          />
           <Route
             exact
             path="/operator-information"
