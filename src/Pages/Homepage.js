@@ -104,7 +104,7 @@ export default function Homepage() {
                 <button className="hover:text-white transform hover:-translate-y-0.5 transition-all duration-150">
                   <a
                     target="_blank"
-                    href="https://github.com/jaeger-dvlp"
+                    href="https://github.com/jaeger-dvlp/"
                     rel="noreferrer"
                   >
                     {GithubIcon}
