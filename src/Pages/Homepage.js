@@ -46,6 +46,7 @@ export default function Homepage() {
     }, 1000)
 
     return () => setDescReady({})
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
