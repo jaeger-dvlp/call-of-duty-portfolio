@@ -147,6 +147,24 @@ export default function Homepage() {
             link="/operator-information"
           />
         </div>
+        <div
+          className="w-full p-2 flex flex-wrap justify-center mx-auto uppercase mt-16 text-center text-stone-700 font-light text-sm"
+          style={{ letterSpacing: '4px' }}
+        >
+          <span className="w-full">
+            {' '}
+            Banner video by{' '}
+          </span>
+
+          <a
+            className="underline underline-offset-4"
+            href="https://www.youtube.com/c/HaciProductions"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Haci Productions
+          </a>
+        </div>
       </div>
     </>
   )
