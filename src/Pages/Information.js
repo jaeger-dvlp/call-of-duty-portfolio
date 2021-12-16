@@ -4,6 +4,7 @@ import {
   useRef,
   useState
 } from 'react'
+import CODbutton from '../Components/CODbutton'
 import backgroundGif from '../Images/noise.gif'
 
 export default function Information() {
@@ -31,6 +32,12 @@ export default function Information() {
       />
       <div className="container h-screen mx-auto bg-black">
         <div className="w-full flex flex-wrap justify-start content-start p-5">
+          <div className="w-full flex flex-wrap justify-start content-start p-0 my-10">
+            <CODbutton
+              buttonText="BACK"
+              link="/"
+            />
+          </div>
           <h1
             className="text-3xl w-full font-pop font-medium text-gray-300 p-0 m-0"
             style={{ letterSpacing: '5px' }}
