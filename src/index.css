@@ -71,3 +71,12 @@ html {
 .cod-button:hover::before {
   width: 100%;
 }
+
+.operator-information
+  table
+  tbody
+  tr
+  td:nth-child(1) {
+  font-weight: 600;
+  padding-right: 1rem;
+}
