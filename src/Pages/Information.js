@@ -12,6 +12,19 @@ export default function Information() {
     useState('visible opacity-100')
   const loadingScreen = useRef()
 
+  const TimeLine = [
+    {
+      company: 'Zaxe 3D Printing Technologies',
+      position: 'Full Stack Developer',
+      startedAt: '08/01/2021'
+    },
+    {
+      company: 'Zaxe 3D Printing Technologies',
+      position: 'Intern',
+      startedAt: '09/01/2020'
+    }
+  ]
+
   useEffect(() => {
     setLoadingStatus('invisible opacity-0')
   }, [])
@@ -87,6 +100,45 @@ export default function Information() {
                 </tr>
               </tbody>
             </table>
+          </div>
+          <span
+            className="desc mt-16 w-full overflow-hidden transition-all duration-300 text-sm uppercase text-zinc-400"
+            style={{
+              letterSpacing: '10px'
+            }}
+          >
+            OPERATOR ASSIGMENT TIMELINE
+          </span>
+          <div className="w-full flex flex-wrap mt-2 justify-start content-start">
+            {TimeLine.map((timeline, x) => (
+              <div className="timeline relative w-full p-4 pt-2 pb-10">
+                <span className="absolute timeline-dot top-3 -left-2 w-5 h-5 bg-neutral-600 rounded-full">
+                  <span className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-black">
+                    <span className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-neutral-600"></span>
+                  </span>
+                </span>
+                <span
+                  className={`absolute timeline-line top-3 ${
+                    x === TimeLine.length - 1
+                      ? 'bg-gradient-to-b from-neutral-600 to-black'
+                      : 'bg-neutral-600'
+                  }  h-full w-px`}
+                ></span>
+                <p className="w-full pl-2 timeline-header text-sm text-zinc-400 p-0 m-0 font-bold uppercase">
+                  {timeline.company}
+                </p>
+                <p
+                  className="w-full pl-2 timeline-header text-xs text-zinc-400 p-0 m-0 font-normal uppercase"
+                  style={{ letterSpacing: '2px' }}
+                >
+                  {timeline.position}
+                </p>
+                <p className="w-full pl-2 pt-4 timeline-header text-xs text-zinc-400 p-0 m-0 font-normal uppercase">
+                  COMMISIONED AT :
+                  <b> {timeline.startedAt}</b>
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
