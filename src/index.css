@@ -80,3 +80,12 @@ html {
   font-weight: 600;
   padding-right: 1rem;
 }
+
+.timeline .timeline-dot {
+  z-index: 10;
+}
+
+.timeline .timeline-line {
+  left: 1px;
+  z-index: 9;
+}
