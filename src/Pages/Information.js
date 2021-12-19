@@ -16,12 +16,12 @@ export default function Information() {
     {
       company: 'Zaxe 3D Printing Technologies',
       position: 'Full Stack Developer',
-      startedAt: '08/01/2021'
+      startedAt: '01/08/2021'
     },
     {
       company: 'Zaxe 3D Printing Technologies',
       position: 'Intern',
-      startedAt: '09/01/2020'
+      startedAt: '01/09/2020'
     }
   ]
 
@@ -111,7 +111,10 @@ export default function Information() {
           </span>
           <div className="w-full flex flex-wrap mt-2 justify-start content-start">
             {TimeLine.map((timeline, x) => (
-              <div className="timeline relative w-full p-4 pt-2 pb-10">
+              <div
+                key={timeline.company}
+                className="timeline relative w-full p-4 pt-2 pb-10"
+              >
                 <span className="absolute timeline-dot top-3 -left-2 w-5 h-5 bg-neutral-600 rounded-full">
                   <span className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-black">
                     <span className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-neutral-600"></span>
