@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-expressions */
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import CODbutton from '../Components/CODbutton'
 import { GithubIcon, DiscordIcon, SteamIcon, LinkedinIcon } from '../Icons'
 import backgroundGif from '../Images/noise.gif'
@@ -28,6 +28,7 @@ export default function Homepage() {
     }, 1000)
 
     return () => setDescReady({})
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

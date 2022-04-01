@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-expressions */
-import { useEffect, useRef, useState } from 'react'
 import CODbutton from '../Components/CODbutton'
 import backgroundGif from '../Images/noise.gif'
 
