@@ -1,16 +1,7 @@
 /* eslint-disable no-unused-expressions */
-import {
-  useEffect,
-  useRef,
-  useState
-} from 'react'
+import { useEffect, useRef, useState } from 'react'
 import CODbutton from '../Components/CODbutton'
-import {
-  GithubIcon,
-  DiscordIcon,
-  SteamIcon,
-  LinkedinIcon
-} from '../Icons'
+import { GithubIcon, DiscordIcon, SteamIcon, LinkedinIcon } from '../Icons'
 import backgroundGif from '../Images/noise.gif'
 import BannerVideo from '../Videos/banner.mp4'
 
@@ -23,12 +14,9 @@ export default function Homepage() {
     'Just another day at office.'
   ]
 
-  const [DescReady, setDescReady] = useState(
-    'Lone Rifleman.'
-  )
+  const [DescReady, setDescReady] = useState('Lone Rifleman.')
 
-  const [LoadingStatus, setLoadingStatus] =
-    useState('visible opacity-100')
+  const [LoadingStatus, setLoadingStatus] = useState('visible opacity-100')
   const loadingScreen = useRef()
 
   useEffect(() => {
@@ -40,9 +28,7 @@ export default function Homepage() {
     changeDesc()
     setInterval(async () => {
       await changeDesc()
-      descIndex === DescTexts.length - 1
-        ? (descIndex = 0)
-        : (descIndex += 1)
+      descIndex === DescTexts.length - 1 ? (descIndex = 0) : (descIndex += 1)
     }, 1000)
 
     return () => setDescReady({})
@@ -73,10 +59,7 @@ export default function Homepage() {
             loop
             playsInline
           >
-            <source
-              src={BannerVideo}
-              type="video/mp4"
-            />
+            <source src={BannerVideo} type="video/mp4" />
           </video>
           <div className="absolute bottom-0 left-0 h-full w-1/3 bg-gradient-to-r from-black to-transparent" />
           <div className="absolute bottom-0 right-0 h-full w-1/3 bg-gradient-to-l from-black to-transparent" />
@@ -113,7 +96,7 @@ export default function Homepage() {
                 <button className="hover:text-white transform hover:-translate-y-0.5 transition-all duration-150">
                   <a
                     target="_blank"
-                    href="https://www.linkedin.com/in/kaya-b30b17178"
+                    href="https://www.linkedin.com/in/of-kayalar"
                     rel="noreferrer"
                   >
                     {LinkedinIcon}
@@ -151,10 +134,7 @@ export default function Homepage() {
           className="w-full p-2 flex flex-wrap justify-center mx-auto uppercase mt-16 text-center text-stone-700 font-light text-sm"
           style={{ letterSpacing: '4px' }}
         >
-          <span className="w-full">
-            {' '}
-            Banner video by{' '}
-          </span>
+          <span className="w-full"> Banner video by </span>
 
           <a
             className="underline underline-offset-4"
