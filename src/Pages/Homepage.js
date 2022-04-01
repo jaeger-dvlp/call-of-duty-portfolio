@@ -16,11 +16,7 @@ export default function Homepage() {
 
   const [DescReady, setDescReady] = useState('Lone Rifleman.')
 
-  const [LoadingStatus, setLoadingStatus] = useState('visible opacity-100')
-  const loadingScreen = useRef()
-
   useEffect(() => {
-    setLoadingStatus('invisible opacity-0')
     let descIndex = 0
     const changeDesc = async () => {
       setDescReady(DescTexts[descIndex])
@@ -32,18 +28,10 @@ export default function Homepage() {
     }, 1000)
 
     return () => setDescReady({})
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
     <>
-      <div
-        className={`z-40 w-screen fixed flex flex-wrap justify-center content-center text-center text-md uppercase text-zinc-400 ${LoadingStatus} h-screen bg-black`}
-        style={{ transition: 'all 1s' }}
-        ref={loadingScreen}
-      >
-        Loading..
-      </div>
       <div
         className="fixed top-0 left-0 w-full opacity-30 z-50 pointer-events-none h-full"
         style={{
